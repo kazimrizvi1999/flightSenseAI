@@ -42,7 +42,7 @@ export default function AIChatWidget({ flightContext = null }) {
       })
       setMessages((m) => [
         ...m,
-        { role: 'assistant', content: data.reply || data.message || 'I couldn\'t process that.' },
+        { role: 'assistant', content: data.response || data.reply || data.message || 'I couldn\'t process that.' },
       ])
     } catch {
       setMessages((m) => [
