@@ -31,7 +31,7 @@ if (process.env.ANTHROPIC_API_KEY) {
 
 // The model to use for all requests.
 // Using claude-sonnet-4-20250514 for the best balance of intelligence and speed.
-const MODEL = 'claude-sonnet-4-20250514';
+const MODEL = 'claude-sonnet-4-6';
 
 // Maximum tokens for recommendation and chat responses
 const MAX_TOKENS_RECOMMEND = 1500;
