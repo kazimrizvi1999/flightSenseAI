@@ -219,16 +219,8 @@ function startCronJob() {
 
   console.log('[Cron] Hourly price-check job scheduled (runs at :00 every hour).');
 
-  // Run an initial check shortly after startup in non-production environments
-  // so developers can see the job working without waiting for the next hour.
-  if (process.env.NODE_ENV !== 'production') {
-    console.log('[Cron] Running initial price check in 5 seconds (non-production mode)...');
-    setTimeout(() => {
-      runPriceCheck().catch((err) => {
-        console.error('[Cron] Initial price check error:', err);
-      });
-    }, 5000);
-  }
+  // Startup check disabled to preserve API quota.
+  // The job runs automatically at the top of every hour.
 }
 
 module.exports = { startCronJob };
