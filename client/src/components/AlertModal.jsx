@@ -64,8 +64,8 @@ export default function AlertModal({ isOpen, onClose, onSaved, editAlert = null 
       const payload = {
         origin: form.origin.trim().toUpperCase(),
         destinations,
-        departDateStart: form.departDateStart || undefined,
-        departDateEnd: form.departDateEnd || undefined,
+        depart_date_start: form.departDateStart || undefined,
+        depart_date_end: form.departDateEnd || undefined,
         max_price: parseFloat(form.maxPrice),
         max_stops: parseInt(form.maxStops),
       }

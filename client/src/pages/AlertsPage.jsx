@@ -171,7 +171,7 @@ export default function AlertsPage() {
     setLoading(true)
     try {
       const { data } = await api.get('/alerts')
-      setAlerts(data || [])
+      setAlerts(data.alerts || data || [])
     } catch {
       toast.error('Failed to load alerts')
     } finally {
